@@ -1,0 +1,11 @@
+[Unit]
+Description=Birdcam RTSP stream service
+
+[Service]
+ExecStart=/bin/bash /home/pi/birdcam.sh
+Restart=on-failure
+RestartSec=15s
+User=pi
+
+[Install]
+WantedBy=multi-user.target
